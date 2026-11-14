@@ -1,0 +1,42 @@
+<svg width="1200" height="140" viewBox="0 0 1200 140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kathmandu, Nepal">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="0.7" stop-color="#101a33"/>
+      <stop offset="1" stop-color="#2b2a47"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="1" r="0.7">
+      <stop offset="0" stop-color="#f0b45a" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#f0b45a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <style>
+    .star { animation: twinkle 4.5s ease-in-out infinite; }
+    .d1 { animation-delay: 1s; }
+    .d2 { animation-delay: 2.2s; animation-duration: 5.5s; }
+    @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 0.9; } }
+    .mist { animation: drift 46s ease-in-out infinite alternate; }
+    @keyframes drift { from { transform: translateX(-40px); } to { transform: translateX(40px); } }
+    .label { font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 5px; fill: #9aa5b8; }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+
+  <rect width="1200" height="140" fill="url(#sky)"/>
+  <rect width="1200" height="140" fill="url(#glow)"/>
+
+  <g fill="#ffffff">
+    <circle class="star" cx="120" cy="24" r="1.1"/>
+    <circle class="star d1" cx="300" cy="46" r="0.9"/>
+    <circle class="star d2" cx="480" cy="20" r="1.2"/>
+    <circle class="star" cx="720" cy="40" r="1"/>
+    <circle class="star d1" cx="900" cy="18" r="1.2"/>
+    <circle class="star d2" cx="1080" cy="44" r="0.9"/>
+  </g>
+
+  <text class="label" x="600" y="52" text-anchor="middle">KATHMANDU · NEPAL</text>
+
+  <path d="M0 108 L90 92 L180 104 L290 76 L380 100 L490 82 L590 104 L700 80 L810 102 L920 84 L1030 104 L1120 90 L1200 100 L1200 140 L0 140 Z" fill="#1c2848"/>
+  <ellipse class="mist" cx="600" cy="108" rx="300" ry="8" fill="#ffffff" opacity="0.05"/>
+  <path d="M0 126 L140 114 L280 126 L440 112 L600 128 L780 114 L940 128 L1080 116 L1200 124 L1200 140 L0 140 Z" fill="#0a1022"/>
+</svg>
